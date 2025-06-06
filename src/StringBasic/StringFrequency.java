@@ -1,5 +1,6 @@
 package StringBasic;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -13,6 +14,17 @@ Map<Character,Long> map=str.chars().mapToObj(c-> (char) c)
                         Collectors.counting()
                 ));
         System.out.println(map);
+
+        int arr[]={2,5,1,2,6,2,1};
+
+        Map<Integer,Long> map1= Arrays.stream(arr).mapToObj(a-> (int) a)
+                .collect(Collectors.groupingBy(
+                        Integer-> Integer,
+                        Collectors.counting()
+                ));
+        System.out.println(map1);
+
+
     }
 
 }
