@@ -1,0 +1,51 @@
+Functional Interface
+
+the interface who contains only one abstract method but can have multiple
+defulet nad static method is called functional interface.
+
+Runnable-------------> run()
+callable-------------> call()
+Comparable-----------> compareTo()
+comparator-----------> compare()
+
+//Steps to make any Function lambda expression
+
+// 1)  Remove modifier
+// 2) remove retuen type
+// 3) remove method name
+// 4) place arrow
+
+
+
+public void sayHello(){
+System.out.print("i am ankit");
+}
+
+()->{
+System.out.print("i am ankit");
+};
+
+public int add(int a,int b){
+System.out.print(a+b);
+}
+
+
+(int a,int b)->{
+System.out.print(a+b);
+}
+
+(a,b)->System.out.print(a+b);
+
+
+
+
+private int getStringLength(String str){
+return str.lenth();
+}
+
+
+(String str)->{
+return str.lenth();
+}
+
+(String str)-> return str.lenth();

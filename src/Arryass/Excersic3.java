@@ -1,4 +1,4 @@
-package Arryas;
+package Arryass;
 
 import java.util.Scanner;
 

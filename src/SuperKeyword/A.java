@@ -1,6 +1,6 @@
 package SuperKeyword;
 
-public class A {
+public class A  {
     int a=10;
 
     A(){

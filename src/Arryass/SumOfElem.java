@@ -1,4 +1,4 @@
-package Arryas;
+package Arryass;
 
 public class SumOfElem {
 	public static void main(String[] args) {
