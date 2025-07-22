@@ -6,12 +6,12 @@ public class Test {
         System.out.println("2");
         System.out.println("3");
         System.out.println("4");
-        try {
+        try{
             System.out.println(5/0);
-        }catch (Exception e){
-            System.out.println(e);
-        }
+        }catch (ArithmeticException e){
+            System.out.println("5 div by zero is no possable");
 
+        }
         System.out.println("6");
         System.out.println("7");
         System.out.println("8");
