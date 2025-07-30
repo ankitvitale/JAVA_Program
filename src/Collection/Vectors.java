@@ -1,35 +1,69 @@
 package Collection;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class Vectors {
     public static void main(String[] args) {
-        Vector<String> colour=new Vector<>(5);
 
-        colour.add("Pink");
-        colour.add("Red");
-        colour.add("Black");
-        colour.add("Green");
-        colour.add("Purpal");
+//        List<Integer> list=new ArrayList<>();
+
+        Vector<Integer> list=new Vector<>();
+
+        Thread t1=new Thread(()->{
+            for (int i=0;i<1000;i++){
+                list.add(i);
+            }
+        });
+
+        Thread t2=new Thread(()->{
+            for (int i=0;i<1000;i++){
+                list.add(i);
+            }
+        });
+
+        t1.start();
+        t2.start();
+
+        try {
+            t1.join();
+            t2.join();
+
+        }catch (InterruptedException e){
+            System.out.println(e);
+        }
 
 
-        colour.add("Pink");
-        colour.add("Red");
-        colour.add("Black");
-        colour.add("Green");
-        colour.add("Purpal");
+        System.out.println("List of size is--"+list.size());
 
 
-        System.out.println(colour);
+        //    Vector<String> colour=new Vector<>(5);
 
-        colour.add("white");
-        colour.capacity();
-        System.out.println(colour.capacity());
-
-        System.out.println("befour clear:-"+colour);
-
-        colour.clear();;
-        System.out.println("After clear "+colour);
+//        colour.add("Pink");
+//        colour.add("Red");
+//        colour.add("Black");
+//        colour.add("Green");
+//        colour.add("Purpal");
+//
+//
+//        colour.add("Pink");
+//        colour.add("Red");
+//        colour.add("Black");
+//        colour.add("Green");
+//        colour.add("Purpal");
+//
+//
+//        System.out.println(colour);
+//
+//        colour.add("white");
+//        colour.capacity();
+//        System.out.println(colour.capacity());
+//
+//        System.out.println("befour clear:-"+colour);
+//
+//        colour.clear();;
+//        System.out.println("After clear "+colour);
 
 
 
