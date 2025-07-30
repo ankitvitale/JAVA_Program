@@ -10,7 +10,7 @@ public class RemoveDuplicateNumbers {
         for (int i=0;i<a.length;i++){
             set.add(a[i]);
         }
-  int []uniqueArray=new int[set.size()];
+       int []uniqueArray=new int[set.size()];
         List<Integer> list=new ArrayList<>(set);
         for (int i=0;i<list.size();i++){
            uniqueArray[i]=list.get(i);

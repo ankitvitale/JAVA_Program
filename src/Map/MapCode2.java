@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class MapCode2 {
     public static void main(String[] args) {
-while (true) {
+  while (true) {
     Scanner sc = new Scanner(System.in);
     Map<String, Integer> student = new HashMap<>();
     student.put("kapil", 101);
