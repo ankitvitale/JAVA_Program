@@ -1,9 +1,8 @@
 package Collection;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
+import com.sun.jdi.Value;
+
+import java.util.*;
 
 public class MapOverView {
     public static void main(String[] args) {
@@ -16,23 +15,43 @@ public class MapOverView {
             map.put("mehul", 4);
             map.put("soban", 5);
             map.put("ajay", 6);
-//            map.put("sahil", 7);
-        System.out.println("befour replace"+map);
+           Map<String, Integer> sortedMap = new TreeMap<>(map);
+           System.out.println(sortedMap);
 
+//        for (Map.Entry<String,Integer> entrys: map.entrySet()){
+//            System.out.println(entrys.getKey()+":"+entrys.getValue());
+//        }
 
-        map.replace("sahil",4);
-
-        System.out.println( "After repalce" +map);
-
-
-
-        System.out.println(" this value exit or not-" +map.containsKey("ajay"));
-        System.out.println(" this value exit or not-" +map.containsKey("sumit"));
+        map.forEach((key,Value)-> System.out.println(key+"::"+Value));
 
 
 
-        System.out.println(" remove name"+ map.remove("ajay"));
-        System.out.println(map);
+            //map.forEach((key, Value)-> System.out.println(key+":"+Value));
+
+//             for (Map.Entry<String,Integer> entry: map.entrySet()){
+//                 System.out.println(entry.getKey()+" : "+entry.getValue());
+//             }
+
+
+
+
+//
+//        System.out.println("befour replace"+map);
+//
+//
+//        map.replace("sahil",4);
+//
+//        System.out.println( "After repalce" +map);
+//
+//
+//
+//        System.out.println(" this value exit or not-" +map.containsKey("ajay"));
+//        System.out.println(" this value exit or not-" +map.containsKey("sumit"));
+//
+//
+//
+//        System.out.println(" remove name"+ map.remove("ajay"));
+//        System.out.println(map);
 
 
 //            System.out.println("Enter the name:-");
