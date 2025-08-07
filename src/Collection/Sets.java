@@ -30,9 +30,18 @@ public class Sets {
         name.add("nayan");
         name.add("shantanu");
 
-        for (String names:name){
-            System.out.println(names);
+        Iterator it=name.iterator();
+
+
+        while(it.hasNext())
+        {
+            System.out.println(it.next());
         }
+
+
+//        for (String names:name){
+//            System.out.println(names);
+//        }
 
 //        Iterator<String> iterator=name.iterator();
 //
